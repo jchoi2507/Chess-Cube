@@ -3,12 +3,20 @@ class Game:
     """
     def __init__(self):
         self.TIME_CONTROL = ["30min", "15min", "10_min", "3plus1"]
+        self.ELO = ["800", "1500", "2000", "SUPER_GM"]
         self.CLOCK = 0
         self.over = False
         self.board = Board()
     
-    def initBoard(self):
-        board.WHITE_SQUARES["A2" = "pawn"]
+    def initBoard(self, board):
+        board.WHITE_SQUARES{"A2": Pawn(clr="white"), "A4": Empty, "A6": Empty, "A8": Rook(clr="black"),
+                              "B1": Knight(clr="white"), "B3": Empty, "B5": Empty, "B7": Pawn(clr="black"),
+                              "C2": Pawn(clr="white"), "C4": Empty, "C6": Empty, "C8": Bishop(clr="black"),
+                              "D1": "", "D3": "", "D5": "", "D7": "",
+                              "E2": "", "E4": "", "E6": "", "E8": "",
+                              "F1": "", "F3": "", "F5": "", "F7": "",
+                              "G2": "", "G4": "", "G6": "", "G8": "",
+                              "H1": "", "H3": "", "H5": "", "H7": ""}
 
 class Board:
     """
@@ -34,34 +42,46 @@ class Board:
 class Pawn:
     """
     """
-    def __init__(self):
+    def __init__(self, clr: str):
         self.loc = ""
+        self.color = clr
 
 class Rook:
     """
     """
-    def __init__(self):
+    def __init__(self, clr: str):
         self.loc = ""
+        self.color = clr
 
 class Knight:
     """
     """
-    def __init__(self):
+    def __init__(self, clr: str):
         self.loc = ""
+        self.color = clr
 
 class Bishop:
     """
     """
-    def __init__(self):
+    def __init__(self, clr: str):
         self.loc = ""
+        self.color = clr
 
 class Queen:
     """
     """
-    def __init__(self):
+    def __init__(self, clr: str):
         self.loc = ""
+        self.color = clr
 
 class King:
+    """
+    """
+    def __init__(self, clr: str):
+        self.loc = ""
+        self.color = clr
+
+class Empty:
     """
     """
     def __init__(self):
